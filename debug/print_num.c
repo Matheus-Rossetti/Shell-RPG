@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int print_num(mapa[20][20]){
+int print_num(int mapa[20][20]){
 
   printf("\033[%d;%df" , 21, 1);
   

@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <unistd.h>
+#include "getch.c"
+#include "namegen.c"
 
 void pimp(int mapa[20][20], int *tra, int *trb, int *memoria){
 
   char mov, menu;
   
-  mov = getch();
+  mov = _getch();
   
   switch(mov){ 
     case 'w': //cima
@@ -145,7 +147,7 @@ void pimp(int mapa[20][20], int *tra, int *trb, int *memoria){
     printf("\n  MMMMM        LLLLL\n");
 
     while(menu != 'x'){
-      menu = getch();
+      menu = _getch();
       switch(menu){
         case 'd':
           system("clear");

@@ -1,5 +1,18 @@
 #include <stdio.h>
-#include <time.h>
+#include <stdlib.h>
+
+#include "mapgen.c"
+#include "print_mapa_inicial.c"
+#include "debug/coordenadas.c"
+
+#include "dentro_mapa/dentro_castelo.c"
+#include "dentro_mapa/dentro_mapa_fogo.c"
+#include "dentro_mapa/dentro_mapa_gelo.c"
+#include "dentro_mapa/dentro_mapa_metal.c"
+#include "dentro_mapa/dentro_mapa_raio.c"
+#include "enspawn.c"
+#include "pimp.c"
+
 
 int main(void) {
 
@@ -16,7 +29,7 @@ system("clear");
   // srand(time(NULL)); //inicia o timer para a escolha aleatória
 //-------------------
 
-mapgen(mapa_inicial, castelo, mapa_gelo, mapa_fogo, mapa_metal, mapa_raio); //gera o mapa 
+mapgen(mapa_inicial, castelo, mapa_gelo, mapa_fogo, mapa_metal, mapa_raio, 0, 0); //gera o mapa
 
    printf("\033[?25l"); //esconde o cursor
   // printf("\033[?25h"); // mostra o cursor

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "switch_print.c"
 
 void print_mapa_inicial(int mapa_inicial[20][20]){
   
